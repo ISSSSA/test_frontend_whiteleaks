@@ -12,8 +12,8 @@ const VacancyManager = () => {
         status: '',
         vacancy_description: '',
     });
-    const API_URL = 'http://localhost:8000/api/v1/vacancy/'; // Замени на свой URL
-    const JWT_TOKEN = localStorage.token; // Замени на актуальный токен
+    const API_URL = 'http://localhost:8000/api/v1/vacancy/';
+    const JWT_TOKEN = localStorage.token;
 
     const axiosInstance = axios.create({
         baseURL: API_URL,
@@ -66,7 +66,7 @@ const VacancyManager = () => {
                     className="w-full border p-2 mb-2"
                     placeholder="ID вакансии"
                 />
-                <button onClick={fetchVacancy} className="bg-blue-500 text-white p-2">Получить вакансию</button>
+                <button onClick={fetchVacancy} className="bg-blue text-white p-2">Получить вакансию</button>
             </div>
             {vacancy && (
                 <div className="mb-4">
@@ -104,8 +104,8 @@ const VacancyManager = () => {
                     />
                     <div dangerouslySetInnerHTML={{ __html: formData.vacancy_description }} className="border p-2 mb-4"></div>
                     <div className="mt-2">
-                        <button onClick={updateVacancy} className="bg-yellow-500 text-white p-2 mx-1">Изменить</button>
-                        <button onClick={deleteVacancy} className="bg-red-500 text-white p-2">Удалить</button>
+                        <button onClick={updateVacancy} className="bg-yellow text-white p-2 mx-1">Изменить</button>
+                        <button onClick={deleteVacancy} className="bg-red text-white p-2">Удалить</button>
                     </div>
                 </div>
             )}

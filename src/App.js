@@ -11,12 +11,12 @@ function App() {
   return (
       <Router>
         <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light space-x-2">
             <Link className="navbar-brand" to="/">
               Job Board
             </Link>
             {isAuthenticated ? (
-                <div>
+                <div className="flex-row space-x-1">
                   <Link className="btn btn-outline-primary" to="/jobs/create">
                     Create Job
                   </Link>
